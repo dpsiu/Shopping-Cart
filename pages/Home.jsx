@@ -1,7 +1,7 @@
 function Home() {
   return (
     <>
-      <h3>Hello</h3>
+      <h3>Home</h3>
     </>
   );
 }

@@ -1,17 +1,17 @@
 import { useState } from "react";
 import "./App.css";
+import { Link, Routes, Route } from "react-router-dom";
 
 import MyComponent from "./MyComponent";
 import Store from "../pages/Store";
 import Checkout from "../pages/Checkout";
 import Home from "../pages/Home";
-
-import { Link, Routes, Route } from "react-router-dom";
+import ProductList from "../components/ProductList";
 
 function App() {
   return (
     <>
-      <ul>
+      <ul className="navBar">
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -22,6 +22,7 @@ function App() {
           <Link to="/checkout">Checkout</Link>
         </li>
       </ul>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/store" element={<Store />} />
