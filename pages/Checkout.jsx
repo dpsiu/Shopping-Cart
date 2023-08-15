@@ -6,7 +6,7 @@ const [cart, setCart] = useState(0)
 
   return (
     <>
-      <h3>Checkout {cart}</h3>
+      <h2>Checkout {cart}</h2>
     </>
   );
 }

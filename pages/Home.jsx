@@ -1,7 +1,14 @@
+import { Link, Routes, Route } from "react-router-dom";
+
 function Home() {
   return (
     <>
-      <h3>Home</h3>
+      <div className="homeShopBtn">
+        <h2>Home</h2>
+        <li>
+          <Link to="/store">Shop Now</Link>
+        </li>
+      </div>
     </>
   );
 }

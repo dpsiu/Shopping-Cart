@@ -22,7 +22,7 @@ export default function ProductList() {
   return (
     <>
       <div className="productList">
-        <h1>Products</h1>
+        <h3>Products</h3>
         <ul>
           {products &&
             products.map((product) => (
