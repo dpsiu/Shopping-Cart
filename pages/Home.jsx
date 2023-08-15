@@ -3,11 +3,10 @@ import { Link, Routes, Route } from "react-router-dom";
 function Home() {
   return (
     <>
-      <div className="homeShopBtn">
-        <h2>Home</h2>
-        <li>
+      <div className="homeBody">
+        <button className="homeShopBtn">
           <Link to="/store">Shop Now</Link>
-        </li>
+        </button>
       </div>
     </>
   );
