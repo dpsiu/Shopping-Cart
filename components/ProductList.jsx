@@ -1,23 +1,38 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useProductState } from "./ProductState"
+
 
 export default function ProductList() {
-  const [products, setProducts] = useState([]);
+  const { products } = useProductState()
 
-  useEffect(() => {
-    async function fetchProducts() {
-      try {
-        const request = await fetch(
-          "https://mock.shop/api?query={products(first:%2020){edges%20{node%20{id%20title%20description%20featuredImage%20{id%20url}%20variants(first:%203){edges%20{node%20{price%20{amount%20currencyCode}}}}}}}}"
-        );
-        const response = await request.json();
+  function extractValidId(id) {
+    const parts = id.split("/");
+    return parts[parts.length - 1];
+  }
 
-        setProducts(response.data.products.edges);
-      } catch (error) {
-        console.error("Error fetching products", error);
-      }
+  const [selectedProduct, setSelectedProduct] = useState({
+    id: "",
+    title: "",
+    description: "",
+    featuredImage: "",
+  });
+
+  const handleProductClick = (
+    newId,
+    newTitle,
+    newDescription,
+    newFeaturedImage
+  ) => {
+    const updatedSelectedProduct ={
+      id: newId,
+      title: newTitle,
+      description: newDescription,
+      featuredImage: newFeaturedImage,
     }
-    fetchProducts();
-  }, []);
+    setSelectedProduct(updatedSelectedProduct)
+    console.log("Here - ", updatedSelectedProduct)
+  };
 
   return (
     <>
@@ -29,11 +44,23 @@ export default function ProductList() {
               <div className="productItem" key={product.node.id}>
                 <li>
                   <h4>{product.node.title}</h4>
-                  {/* <p>{product.node.description}</p> */}
-                  <img
-                    src={product.node.featuredImage.url}
-                    alt={product.node.title}
-                  />
+                  <Link
+                    to={`/ProductPage/${extractValidId(product.node.id)}`}
+                    state={{ selectedProduct: selectedProduct }}
+                  >
+                    <img
+                      src={product.node.featuredImage.url}
+                      alt={product.node.title}
+                      onClick={() =>
+                        handleProductClick(
+                          product.node.id,
+                          product.node.title,
+                          product.node.description,
+                          product.node.featuredImage
+                        )
+                      }
+                    />
+                  </Link>
                   <p>
                     Price: $
                     {product.node.variants.edges[0].node.price.amount * 5}{" "}

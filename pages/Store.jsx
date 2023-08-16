@@ -1,11 +1,9 @@
-import ProductList from "../components/ProductList"
+import ProductList from "../components/ProductList";
 
-function Store() {
+export default function Store() {
   return (
     <>
       <ProductList />
     </>
   );
 }
-
-export default Store
