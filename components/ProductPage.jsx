@@ -14,8 +14,34 @@ export default function ProductPage() {
   return (
     <>
       <div className="productPage">
-        <h1>{id}</h1>
-        <h1>{product.node.description}</h1>
+        <img
+          src={product.node.featuredImage.url}
+          alt={product.node.title}
+        />
+        <div className="productInfo">
+          <h4>{product.node.title}</h4>
+          <p>{product.node.description}</p>
+          <p>
+            Price: ${product.node.variants.edges[0].node.price.amount * 5}{" "}
+            {product.node.variants.edges[0].node.price.currencyCode}
+          </p>
+          <button>Add to Cart</button>
+{/* I want to create an add to cart button. Might need cart component,
+similar to having created productstate component. Utilize the ...product?
+Think about how WebDevSimplified used the ... to make a new array, adding
+this item into it. If I go to diff product page, the array data must be pushed 
+back to cart component? Once that works, think about how to calculate total. 
+
+Steps - 
+- Avoid quantity rn. Add button made. Need some indicator of add. 
+    Checkout li (0) number? / "Added to cart"
+- Design checkout page. Follow amazon. Left half = "Shopping cart" 
+        + array of items. 
+    Right half = Box with border style. "Subtotal (X items): $$$" 
+        "Proceed to checkout" button
+- Map through cart array. With each, render out Title + Price + "Delete" button*/}
+
+        </div>
       </div>
     </>
   );
