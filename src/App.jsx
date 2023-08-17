@@ -7,25 +7,21 @@ import Store from "../pages/Store";
 import Checkout from "../pages/Checkout";
 import Home from "../pages/Home";
 import ProductList from "../components/ProductList";
-import ProductPage from "../components/ProductPage"
+import ProductPage from "../components/ProductPage";
 
 const Layout = ({ children }) => (
   <>
-    <div className="navBar">
-      <ul className="navBarLeft">
-        <Link to="/">
-          <li>Home</li>
-        </Link>
-        <Link to="/store">
-          <li>Store</li>
-        </Link>
-      </ul>
-      <ul className="navBarRight">
-        <Link to="/checkout">
-          <li>Checkout</li>
-        </Link>
-      </ul>
-    </div>
+    <ul className="navBar">
+      <Link to="/">
+        <li>Home</li>
+      </Link>
+      <Link to="/store">
+        <li>Store</li>
+      </Link>
+      <Link to="/checkout" className="lastLink">
+        <li>Checkout</li>
+      </Link>
+    </ul>
     <div className="content">{children}</div>
     <div className="footer">
       <p>2023</p>

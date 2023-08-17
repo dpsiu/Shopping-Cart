@@ -3,6 +3,7 @@
   width: 100vw;
   font-size: 16px;
   /* width: 1620px; */
+  position: relative;
 }
 
 body {
@@ -17,26 +18,18 @@ h2 {
 }
 
 .navBar {
-  margin: 0px 4rem;
-}
-
-.navBar,
-.navBarLeft {
   display: flex;
-  justify-content: space-between;
-}
-
-.navBarLeft,
-.navBarRight {
+  justify-content: left;
   margin: 3rem;
-  padding: 0px;
 }
 
-.navBarLeft li,
-.navBarRight li {
-  font-size: larger;
-  padding: .5rem;
-  margin: 0px 1rem;
+.navBar li{
+  margin: 0rem 2rem;
+  padding: 1rem 3rem;
+}
+
+.lastLink {
+  margin-left: auto;
 }
 
 ul li,
@@ -101,7 +94,7 @@ li{
   background-image: url(../images/homebanner.jpg);
   background-position: center;
 
-  height: 80.5vh;
+  height: 100vh;
   width: 100vw !important;
 }
 
@@ -130,8 +123,9 @@ li{
   justify-content: center;
   align-items: center;
   height: 5rem;
+  background-color: #f9f9f9;
   border-top: 1px solid #bebebe;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
