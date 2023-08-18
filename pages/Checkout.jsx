@@ -1,12 +1,8 @@
 import React, { useState, useContext } from "react";
 import { ShopContext } from "../src/App";
-// import { cartItemsNum } from "../components/NavBar";
 
 export default function Checkout() {
   const { cartItems, removeFromCart } = useContext(ShopContext);
-  // const {cartItemsNum} =
-  console.log(cartItems);
-
   const subTotal = cartItems.reduce((total, item) => {
     return total + item.node.variants.edges[0].node.price.amount * 5;
   }, 0);
@@ -32,8 +28,7 @@ export default function Checkout() {
                   </p>
                   <button
                     className="removeProduct"
-                    onClick={() => removeFromCart(item)}
-                  >
+                    onClick={() => removeFromCart(item)}>
                     Remove
                   </button>
                 </div>
