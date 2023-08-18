@@ -1,14 +1,17 @@
-import {useState} from 'react'
+import React from "react";
+// import { Cart } from "../components/Cart";
 
-function Checkout() {
+export default function Checkout() {
+  const { cartItems } = Cart()
 
-const [cart, setCart] = useState(0)
-
+  function showCart() {
+    console.log(cartItems.length)
+  }
   return (
     <>
-      <h2>Checkout {cart}</h2>
+      {/* <h2>Checkout {cartItems.length}</h2>
+      <button onClick={showCart}>Show Cart</button> */}
+      <h2>Hi</h2>
     </>
   );
 }
-
-export default Checkout

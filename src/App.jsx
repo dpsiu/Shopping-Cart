@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
 import "./App.css";
 import { Link, Routes, Route, Outlet } from "react-router-dom";
 
@@ -8,20 +8,11 @@ import Checkout from "../pages/Checkout";
 import Home from "../pages/Home";
 import ProductList from "../components/ProductList";
 import ProductPage from "../components/ProductPage";
+import NavBar from "../components/NavBar"
 
 const Layout = ({ children }) => (
   <>
-    <ul className="navBar">
-      <Link to="/">
-        <li>Home</li>
-      </Link>
-      <Link to="/store">
-        <li>Store</li>
-      </Link>
-      <Link to="/checkout" className="lastLink">
-        <li>Checkout</li>
-      </Link>
-    </ul>
+    <NavBar />
     <div className="content">{children}</div>
     <div className="footer">
       <p>2023</p>
@@ -37,13 +28,28 @@ const Layout = ({ children }) => (
   </>
 );
 
-const App = () => (
-  <Routes>
-    <Route path="/" element={<Layout><Home /></Layout>} />
-    <Route path="/store" element={<Layout><Store /></Layout>} />
-    <Route path="/ProductPage/:id" element={<Layout><ProductPage /></Layout>} />
-    <Route path="/checkout" element={<Layout><Checkout /></Layout>} />
-  </Routes>
-);
+export const ShopContext = createContext({
+  cartItems: [],
+  addToCart: () => {},
+})
+
+const App = () => {
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (product) => {
+    setCartItems([...cartItems, product]);
+  };
+
+  return (
+    <ShopContext.Provider value={{ cartItems, addToCart }}>
+      <Routes>
+        <Route path="/" element={<Layout><Home /></Layout>} />
+        <Route path="/store" element={<Layout><Store /></Layout>} />
+        <Route path="/ProductPage/:id" element={<Layout><ProductPage /></Layout>} />
+        <Route path="/checkout" element={<Layout><Checkout /></Layout>} />
+      </Routes>
+    </ShopContext.Provider>
+  );
+};
 
 export default App;

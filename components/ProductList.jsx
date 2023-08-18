@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useProductState } from "./ProductState"
+// import {Cart} from "../components/Cart"
 
 export default function ProductList() {
-  const { products } = useProductState()
+  const { products } = useProductState();
 
   function extractValidId(id) {
     const parts = id.split("/");
@@ -15,22 +16,25 @@ export default function ProductList() {
     title: "",
     description: "",
     featuredImage: "",
+    price: ""
   });
 
   const handleProductClick = (
     newId,
     newTitle,
     newDescription,
-    newFeaturedImage
+    newFeaturedImage,
+    newPrice
   ) => {
-    const updatedSelectedProduct ={
+    const updatedSelectedProduct = {
       id: newId,
       title: newTitle,
       description: newDescription,
       featuredImage: newFeaturedImage,
-    }
-    setSelectedProduct(updatedSelectedProduct)
-    console.log("Here - ", updatedSelectedProduct)
+      price: newPrice
+    };
+    setSelectedProduct(updatedSelectedProduct);
+    console.log("Here - ", updatedSelectedProduct);
   };
 
   return (
@@ -55,7 +59,8 @@ export default function ProductList() {
                           product.node.id,
                           product.node.title,
                           product.node.description,
-                          product.node.featuredImage
+                          product.node.featuredImage,
+                          product.node.variants.edges[0].node.price.amount * 5
                         )
                       }
                     />
