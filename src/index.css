@@ -20,7 +20,9 @@ a:hover {
 
 .navBar li,
 .homeShopBtn,
-.productInfo button {
+.productInfo button,
+.cartTotal button,
+.cartItemInfo button {
   border: 1px solid transparent;
   padding: 0.6rem 2.4rem;
   font-size: 1.1rem;
@@ -33,7 +35,9 @@ a:hover {
 
 .navBar li:hover,
 .homeShopBtn:hover,
-.productInfo button:hover {
+.productInfo button:hover,
+.cartTotal button:hover,
+.cartItemInfo button:hover {
   border: 1px solid #1a1a1a;
   background-color: #ffffff8b;
 }

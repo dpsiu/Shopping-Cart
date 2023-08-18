@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { useProductState } from "./ProductState";
-// import { Cart } from "../components/Cart";
 import { ShopContext } from "../src/App";
 
 export default function ProductPage() {

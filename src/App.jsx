@@ -8,7 +8,7 @@ import Checkout from "../pages/Checkout";
 import Home from "../pages/Home";
 import ProductList from "../components/ProductList";
 import ProductPage from "../components/ProductPage";
-import NavBar from "../components/NavBar"
+import NavBar from "../components/NavBar";
 
 const Layout = ({ children }) => (
   <>
@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
 export const ShopContext = createContext({
   cartItems: [],
   addToCart: () => {},
-})
+});
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -40,13 +40,45 @@ const App = () => {
     setCartItems([...cartItems, product]);
   };
 
+  const removeFromCart = (product) => {
+    setCartItems(cartItems.filter((item) => item !== product));
+  };
+
   return (
-    <ShopContext.Provider value={{ cartItems, addToCart }}>
+    <ShopContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
       <Routes>
-        <Route path="/" element={<Layout><Home /></Layout>} />
-        <Route path="/store" element={<Layout><Store /></Layout>} />
-        <Route path="/ProductPage/:id" element={<Layout><ProductPage /></Layout>} />
-        <Route path="/checkout" element={<Layout><Checkout /></Layout>} />
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
+        <Route
+          path="/store"
+          element={
+            <Layout>
+              <Store />
+            </Layout>
+          }
+        />
+        <Route
+          path="/ProductPage/:id"
+          element={
+            <Layout>
+              <ProductPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/checkout"
+          element={
+            <Layout>
+              <Checkout />
+            </Layout>
+          }
+        />
       </Routes>
     </ShopContext.Provider>
   );

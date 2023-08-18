@@ -6,6 +6,8 @@ import {ShopContext} from "../src/App"
 export default function NavBar() {
     const { cartItems } = useContext(ShopContext)
 
+    const cartItemsNum = cartItems.length > 0 ? `(${cartItems.length})` : ""
+
   return (
     <>
       <ul className="navBar">
@@ -16,7 +18,7 @@ export default function NavBar() {
           <li>Store</li>
         </Link>
         <Link to="/checkout" className="lastLink">
-          <li>Checkout ({cartItems.length})</li>
+          <li>Checkout {cartItemsNum}</li>
         </Link>
       </ul>
     </>
