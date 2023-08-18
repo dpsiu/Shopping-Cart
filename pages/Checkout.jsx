@@ -12,7 +12,7 @@ export default function Checkout() {
   }, 0);
 
   function checkoutComplete() {
-    alert("Thanks for viewing! Project demo completed.")
+    alert("Thanks for viewing! Project demo completed.");
   }
 
   return (
@@ -30,14 +30,21 @@ export default function Checkout() {
                     Price: ${item.node.variants.edges[0].node.price.amount * 5}{" "}
                     {item.node.variants.edges[0].node.price.currencyCode}
                   </p>
-                  <button className="removeProduct" onClick={() => removeFromCart(item)}>Remove</button>
+                  <button
+                    className="removeProduct"
+                    onClick={() => removeFromCart(item)}
+                  >
+                    Remove
+                  </button>
                 </div>
               </div>
             ))}
           </div>
           <div className="cartTotal">
             <h3>Subtotal: ${subTotal}</h3>
-            <button onClick={() => checkoutComplete()}>Proceed to Checkout</button>
+            <button onClick={() => checkoutComplete()}>
+              Proceed to Checkout
+            </button>
           </div>
         </div>
       </div>

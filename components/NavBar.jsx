@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { Link, Routes, Route, Outlet } from "react-router-dom";
 
-import {ShopContext} from "../src/App"
+import { ShopContext } from "../src/App";
 
 export default function NavBar() {
-    const { cartItems } = useContext(ShopContext)
+  const { cartItems } = useContext(ShopContext);
 
-    const cartItemsNum = cartItems.length > 0 ? `(${cartItems.length})` : ""
+  const cartItemsNum = cartItems.length > 0 ? `(${cartItems.length})` : "";
 
   return (
     <>

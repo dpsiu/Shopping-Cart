@@ -7,7 +7,7 @@ export default function ProductPage() {
   const { products } = useProductState();
   const { id } = useParams();
   const product = products.find((product) => product.node.id.includes(id));
-  const {addToCart} = useContext(ShopContext)
+  const { addToCart } = useContext(ShopContext);
 
   if (!product) {
     return <div>Product not found</div>;

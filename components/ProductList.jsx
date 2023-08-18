@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useProductState } from "./ProductState"
+import { useProductState } from "./ProductState";
 
 export default function ProductList() {
   const { products } = useProductState();
@@ -15,7 +15,7 @@ export default function ProductList() {
     title: "",
     description: "",
     featuredImage: "",
-    price: ""
+    price: "",
   });
 
   const handleProductClick = (
@@ -30,7 +30,7 @@ export default function ProductList() {
       title: newTitle,
       description: newDescription,
       featuredImage: newFeaturedImage,
-      price: newPrice
+      price: newPrice,
     };
     setSelectedProduct(updatedSelectedProduct);
     console.log("Here - ", updatedSelectedProduct);
