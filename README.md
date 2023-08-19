@@ -8,7 +8,7 @@ This project is a mock shopping cart application built using React. It demonstra
 - [Technologies Used](#technologies-used)
 
 ## Demo
-[Shopping Cart Project]()
+[Shopping Cart Project](https://denversiu-shopping-cart.netlify.app/)
 
 ## Features
 - Three pages: Home, Shop, and Checkout page.
@@ -19,12 +19,13 @@ This project is a mock shopping cart application built using React. It demonstra
 - Fetching shop items from an API (e.g., Mock Shop API).
 
 ## Technologies Used
+- HTML, CSS
 - React
 - React Router DOM
-- FakeStore API (or similar)
-- React Testing Library
+- Fetching Data (MockShop API integration)
+- State Management
+- Component Structure
 
-
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ToDo
+- Create mobile UX
+- Cross-reference WCAG
