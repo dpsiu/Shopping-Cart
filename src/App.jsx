@@ -34,17 +34,26 @@ export const ShopContext = createContext({
 });
 
 const App = () => {
-  // useEffect(() => {
-  //   const storedCart = localStorage.getItem("cartItems")
-  //   if (storedCart) {
-  //     setCartItems(JSON.parse(storedCart))
-  //   }
-  // }, [])
-
   const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = (product) => {
-    setCartItems([...cartItems, product]);
+  const addToCart = (product, quantity) => {
+    console.log(product)    
+    console.log(quantity)
+
+    // for (let i = quantity; i >= 0; i--) {
+    //   setCartItems([...cartItems, product]);
+    //   console.log("added " + i + " times")
+    //   console.log(cartItems)
+    // }
+
+    for (let i = quantity; i >= 1; i--) {
+      setCartItems((cartItems) => {
+        return [...cartItems, product]
+      })
+    }
+
+
+    // setCartItems([...cartItems, product]);
 
     // localStorage.setItem("cartItems", JSON.stringify(cartItems))
   };

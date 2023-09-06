@@ -8,7 +8,9 @@ export default function Checkout() {
   }, 0);
 
   function checkoutComplete() {
-    alert("Thanks for viewing! Project demo completed.");
+    console.log(cartItems.length)
+    const demoMessage = (cartItems.length > 0) ? "Thanks for viewing! Project demo completed." : "You haven't selected any items!"
+    alert(demoMessage)
   }
 
   return (

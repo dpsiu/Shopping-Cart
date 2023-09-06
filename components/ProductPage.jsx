@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { useProductState } from "./ProductState";
 import { ShopContext } from "../src/App";
@@ -8,6 +8,7 @@ export default function ProductPage() {
   const { id } = useParams();
   const product = products.find((product) => product.node.id.includes(id));
   const { addToCart } = useContext(ShopContext);
+  const [quantity, setQuantity] = useState(1)
 
   if (!product) {
     return <div>Product not found</div>;
@@ -21,10 +22,15 @@ export default function ProductPage() {
           <h4>{product.node.title}</h4>
           <p>{product.node.description}</p>
           <p>
-            Price: ${product.node.variants.edges[0].node.price.amount * 5}{" "}
+            Price: ${product.node.variants.edges[0].node.price.amount * 5 * quantity}{" "}
             {product.node.variants.edges[0].node.price.currencyCode}
           </p>
-          <button onClick={() => addToCart(product)}>Add to Cart</button>
+          <div className="counter">
+            <button onClick={() => setQuantity(quantity-1)} disabled={quantity===1}>-</button>
+            <p>{quantity}</p>
+            <button onClick={() => setQuantity(quantity+1)} disabled={quantity===10}>+</button>
+          </div>
+          <button onClick={() => addToCart(product, quantity)}>Add to Cart</button>
         </div>
       </div>
     </>

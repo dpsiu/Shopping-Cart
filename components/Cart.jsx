@@ -7,15 +7,4 @@ export const Cart = () => {
     console.log("Updated cartItems:", cartItems)
     console.log(cartItems.length)
   }, [cartItems]);
-
-
-//   const addToCart = (product) => {
-//     setCartItems([...cartItems, product]);
-//     // setCartItems((currentCartItems) => {
-//     //   return [...currentCartItems, product];
-//     // });
-    
-//   };
-
-//   return { cartItems, addToCart };
 };

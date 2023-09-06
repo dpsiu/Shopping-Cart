@@ -16,6 +16,7 @@ export default function ProductList() {
     description: "",
     featuredImage: "",
     price: "",
+    quantity: 1,
   });
 
   const handleProductClick = (
@@ -23,7 +24,8 @@ export default function ProductList() {
     newTitle,
     newDescription,
     newFeaturedImage,
-    newPrice
+    newPrice,
+    // newQuantity
   ) => {
     const updatedSelectedProduct = {
       id: newId,
@@ -31,9 +33,9 @@ export default function ProductList() {
       description: newDescription,
       featuredImage: newFeaturedImage,
       price: newPrice,
+      // quantity: newQuantity
     };
     setSelectedProduct(updatedSelectedProduct);
-    console.log("Here - ", updatedSelectedProduct);
   };
 
   return (
@@ -59,7 +61,8 @@ export default function ProductList() {
                           product.node.title,
                           product.node.description,
                           product.node.featuredImage,
-                          product.node.variants.edges[0].node.price.amount * 5
+                          product.node.variants.edges[0].node.price.amount * 5,
+                          product.node.quantity
                         )
                       }
                     />
