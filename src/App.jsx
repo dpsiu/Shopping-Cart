@@ -49,7 +49,7 @@ const App = () => {
   };
 
   const removeFromCart = (product) => {
-    setCartItems(cartItems.filter((item) => item !== product));
+    setCartItems(cartItems.filter((item) => item.node.title !== product));
 
     // localStorage.setItem("cartItems", JSON.stringify(cartItems))
   };

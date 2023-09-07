@@ -90,9 +90,11 @@ export default function Checkout() {
                     Price: ${itemProperties[0].price * itemProperties.length}{" "}
                     {itemProperties[0].currencyCode} 
                   </p>
+                  {/* Need num increment. Same as product page.
+                  - and + cut and add to array respectively. */}
                   <button
                     className="removeProduct"
-                    onClick={() => removeFromCart(item)}
+                    onClick={() => removeFromCart(itemName)}
                   >
                     Remove
                   </button>
