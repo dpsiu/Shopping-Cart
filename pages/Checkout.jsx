@@ -46,7 +46,6 @@ export default function Checkout() {
         price: item.node.variants.edges[0].node.price.amount * 5,
         image: item.node.featuredImage.url,
         currencyCode: item.node.variants.edges[0].node.price.currencyCode,
-        // length: itemCount[itemName].length
       })
     });
     console.log(itemCount);
