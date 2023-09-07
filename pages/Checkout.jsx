@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../src/App";
-import { extractValidId } from "../components/ProductList"
+import { extractValidId } from "../components/ProductList";
 
 export default function Checkout() {
   const { cartItems, removeFromCart } = useContext(ShopContext);
@@ -26,16 +26,12 @@ export default function Checkout() {
           <div className="itemsInCart">
             {cartItems.map((item) => (
               <div className="cartItem" key={crypto.randomUUID()}>
-                <Link
-                    to={`/ProductPage/${extractValidId(item.node.id)}`}
-                  >
+                <Link to={`/ProductPage/${extractValidId(item.node.id)}`}>
                   <img
                     src={item.node.featuredImage.url}
                     alt={item.node.title}
                   />
                 </Link>
-
-                <img src={item.node.featuredImage.url} alt={item.node.title} />
                 <div className="cartItemInfo">
                   <h2>{item.node.title}</h2>
                   <p>
