@@ -40,21 +40,11 @@ const App = () => {
     console.log(product)    
     console.log(quantity)
 
-    // for (let i = quantity; i >= 0; i--) {
-    //   setCartItems([...cartItems, product]);
-    //   console.log("added " + i + " times")
-    //   console.log(cartItems)
-    // }
-
     for (let i = quantity; i >= 1; i--) {
       setCartItems((cartItems) => {
         return [...cartItems, product]
       })
     }
-
-
-    // setCartItems([...cartItems, product]);
-
     // localStorage.setItem("cartItems", JSON.stringify(cartItems))
   };
 

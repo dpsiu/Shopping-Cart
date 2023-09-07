@@ -2,13 +2,16 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useProductState } from "./ProductState";
 
+export function extractValidId(id) {
+  const parts = id.split("/");
+  return parts[parts.length - 1];
+}
+
+
+
+
 export default function ProductList() {
   const { products } = useProductState();
-
-  function extractValidId(id) {
-    const parts = id.split("/");
-    return parts[parts.length - 1];
-  }
 
   const [selectedProduct, setSelectedProduct] = useState({
     id: "",
@@ -16,7 +19,6 @@ export default function ProductList() {
     description: "",
     featuredImage: "",
     price: "",
-    quantity: 1,
   });
 
   const handleProductClick = (
@@ -24,8 +26,7 @@ export default function ProductList() {
     newTitle,
     newDescription,
     newFeaturedImage,
-    newPrice,
-    // newQuantity
+    newPrice
   ) => {
     const updatedSelectedProduct = {
       id: newId,
@@ -33,7 +34,6 @@ export default function ProductList() {
       description: newDescription,
       featuredImage: newFeaturedImage,
       price: newPrice,
-      // quantity: newQuantity
     };
     setSelectedProduct(updatedSelectedProduct);
   };
