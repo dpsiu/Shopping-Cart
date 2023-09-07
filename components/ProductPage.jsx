@@ -7,8 +7,7 @@ export default function ProductPage() {
   const { products } = useProductState();
   const { id } = useParams();
   const product = products.find((product) => product.node.id.includes(id));
-  const { addToCart } = useContext(ShopContext);
-  const [quantity, setQuantity] = useState(1)
+  const { addToCart, quantity, incrementQuantity, decrementQuantity } = useContext(ShopContext);
 
   if (!product) {
     return <div>Product not found</div>;
@@ -26,9 +25,9 @@ export default function ProductPage() {
             {product.node.variants.edges[0].node.price.currencyCode}
           </p>
           <div className="counter">
-            <button onClick={() => setQuantity(quantity-1)} disabled={quantity===1}>-</button>
+            <button onClick={() => decrementQuantity()} disabled={quantity===1}>-</button>
             <p>{quantity}</p>
-            <button onClick={() => setQuantity(quantity+1)} disabled={quantity===10}>+</button>
+            <button onClick={() => incrementQuantity()} disabled={quantity===10}>+</button>
           </div>
           <button onClick={() => addToCart(product, quantity)}>Add to Cart</button>
         </div>

@@ -35,15 +35,16 @@ export const ShopContext = createContext({
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [quantity, setQuantity] = useState(1);
 
   const addToCart = (product, quantity) => {
-    console.log(product)    
-    console.log(quantity)
+    console.log(product);
+    console.log(quantity);
 
     for (let i = quantity; i >= 1; i--) {
       setCartItems((cartItems) => {
-        return [...cartItems, product]
-      })
+        return [...cartItems, product];
+      });
     }
     // localStorage.setItem("cartItems", JSON.stringify(cartItems))
   };
@@ -54,8 +55,51 @@ const App = () => {
     // localStorage.setItem("cartItems", JSON.stringify(cartItems))
   };
 
+  const incrementQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const decrementQuantity = (itemQuantity) => {
+    console.log(itemQuantity)
+    // itemQuantity.pop()
+    setQuantity(quantity - 1);
+  };
+
+
+  // const decrementQuantity = (productId) => {
+  //   const updatedCartItems = [...cartItems];
+  //   const productIndex = updatedCartItems.findIndex(
+  //     (item) => item.id === productId
+  //   );
+  
+  //   if (productIndex !== -1) {
+  //     if (updatedCartItems[productIndex].quantity > 1) {
+  //       updatedCartItems[productIndex].quantity -= 1;
+  //     } else {
+  //       updatedCartItems.splice(productIndex, 1);
+  //     }
+  //   }
+  // };
+  
+
+// I'm successfully removing from shirts array. However, checkout page
+// doesn't rerender. React rerenders upon state change. So state not changing.
+// BC checkout page reads cartItems array. I am changing shirts array.
+// So need to remove one instance of specified item from cartItems array.
+// In cartItems array, map through each item, 
+
   return (
-    <ShopContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+    <ShopContext.Provider
+      value={{
+        cartItems,
+        quantity,
+        setQuantity,
+        addToCart,
+        removeFromCart,
+        decrementQuantity,
+        incrementQuantity,
+      }}
+    >
       <Routes>
         <Route
           path="/"
