@@ -7,9 +7,6 @@ export function extractValidId(id) {
   return parts[parts.length - 1];
 }
 
-
-
-
 export default function ProductList() {
   const { products } = useProductState();
 
