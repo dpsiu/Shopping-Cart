@@ -45,16 +45,12 @@ export default function Checkout() {
         itemCount[itemName] = [];
       }
 
-      // itemCount[itemName] is each unique item, ie, shirt, pants, etc
-      // as an array with X objects (each instance of shirt, pants, etc)
-
       itemCount[itemName].push({
         title: item.node.title,
         id: item.node.id,
         price: item.node.variants.edges[0].node.price.amount * 5,
         image: item.node.featuredImage.url,
         currencyCode: item.node.variants.edges[0].node.price.currencyCode,
-        // quantity: itemCount[itemName].length
       });
     });
     console.log(itemCount);
@@ -76,12 +72,6 @@ export default function Checkout() {
   // price and id properties.
 
   const uniqueItemCount = uniqueItems(cartItems);
-  console.log(uniqueItemCount);
-
-  // function decreaseQuantity(quantity) {
-  //   console.log(quantity)
-  //   return quantity.pop()
-  // }
 
   return (
     <>

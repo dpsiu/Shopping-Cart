@@ -38,21 +38,16 @@ const App = () => {
   const [quantity, setQuantity] = useState(1);
 
   const addToCart = (product, quantity) => {
-    console.log(product);
-    console.log(quantity);
-
     for (let i = quantity; i >= 1; i--) {
       setCartItems((cartItems) => {
         return [...cartItems, product];
       });
     }
-    // localStorage.setItem("cartItems", JSON.stringify(cartItems))
+    setQuantity(1)
   };
 
   const removeFromCart = (product) => {
     setCartItems(cartItems.filter((item) => item.node.title !== product));
-
-    // localStorage.setItem("cartItems", JSON.stringify(cartItems))
   };
 
   const incrementQuantity = () => {
@@ -60,8 +55,6 @@ const App = () => {
   };
 
   const decrementQuantity = (itemQuantity) => {
-    console.log(itemQuantity)
-    // itemQuantity.pop()
     setQuantity(quantity - 1);
   };
 
@@ -86,7 +79,6 @@ const App = () => {
 // doesn't rerender. React rerenders upon state change. So state not changing.
 // BC checkout page reads cartItems array. I am changing shirts array.
 // So need to remove one instance of specified item from cartItems array.
-// In cartItems array, map through each item, 
 
   return (
     <ShopContext.Provider

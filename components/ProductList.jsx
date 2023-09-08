@@ -9,7 +9,6 @@ export function extractValidId(id) {
 
 export default function ProductList() {
   const { products } = useProductState();
-
   const [selectedProduct, setSelectedProduct] = useState({
     id: "",
     title: "",

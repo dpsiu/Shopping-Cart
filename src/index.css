@@ -2,20 +2,12 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 }
 
 a {
   font-weight: 500;
   color: #000000;
   text-decoration: inherit;
-}
-
-a:hover {
-  color: #ffffff;
 }
 
 .navBar li,
@@ -28,7 +20,7 @@ a:hover {
   font-size: 1.1rem;
   font-family: inherit;
   cursor: pointer;
-  background-color: #f9f9f9a8;
+  background-color: #f9f9f984;
   border-color: #bebebe;
   transition: border-color 0.25s;
 }
@@ -40,17 +32,4 @@ a:hover {
 .cartItemInfo button:hover {
   border: 1px solid #1a1a1a;
   background-color: #ffffff8b;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #000000;
-  }
-  .navBar li {
-    background-color: #f9f9f9;
-  }
 }

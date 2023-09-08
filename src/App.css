@@ -1,13 +1,20 @@
-#root {
+:root {
   height: 100vh;
   width: 100vw;
   font-size: 16px;
-  /* width: 1620px; */
   position: relative;
-
   max-width: 1600px;
-
+  color: var(--clr-main);
+  background-color: var(--clr-main);
   --clr-main: white;
+  --clr-main-transparent: rgba(255, 255, 255, 0.8);
+  --clr-border: #bebebe;
+  --clr-accent: #3f8654;
+  --clr-black: rgb(45, 45, 45);
+  --clr-success-state: #9bc596;
+  --clr-success-state-hover: #6abf5e;
+  --clr-error-state: #c29393;
+  --clr-error-state-hover: #be6767;
 }
 
 body {
@@ -39,30 +46,6 @@ h2 {
   margin-left: auto;
 }
 
-/* .navBar {
-  margin: 0px 4rem;
-  background-color: var(--clr-main);
-}
-
-.navBar,
-.navBarLeft {
-  display: flex;
-  justify-content: space-between;
-}
-
-.navBarLeft,
-.navBarRight {
-  margin: 3rem;
-  padding: 0px;
-}
-
-.navBarLeft li,
-.navBarRight li {
-  font-size: larger;
-  padding: .5rem;
-  margin: 0px 1rem;
-} */
-
 ul li,
 li{
   text-decoration: none;
@@ -85,12 +68,12 @@ li{
 .productList img {
   max-width: 250px;
   border: 1px solid ;
-  border-color: #bebebe;
+  border-color: var(--clr-border);
   transition: border-color 0.25s;
 }
 
 .productList img:hover {
-  border: 1px solid black;
+  border: 1px solid var(--clr-black);
 }
 
 .productList img:hover {
@@ -148,7 +131,7 @@ li{
   align-items: center;
   height: 5rem;
   background-color: #f9f9f9;
-  border-top: 1px solid #bebebe;
+  border-top: 1px solid var(--clr-border);
 
 }
 
@@ -167,6 +150,12 @@ li{
   justify-content: center;
   align-items: center;
   font-size: larger;
+  color: var(--clr-black);
+  transition: color .25s;
+}
+
+.footer a:hover {
+  color: var(--clr-accent);
 }
 
 /* ProductPage*/
@@ -175,7 +164,7 @@ li{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #bebebe;
+  border: 1px solid var(--clr-border);
 }
 
 .productPage img {
@@ -274,7 +263,7 @@ li{
 }
 
 .checkout h2 {
-  border-bottom: 1px solid #bebebe;
+  border-bottom: 1px solid var(--clr-border);
   padding: 1rem 0rem;
 }
 
@@ -287,26 +276,36 @@ li{
 .cartTotal {
   padding: 2rem;
   margin: 1rem;
-  border: 1px solid #bebebe;
+  border: 1px solid var(--clr-border);
 
   min-width: 20%;
 }
 
 .cartTotal button {
-  background-color: #8fc788 !important;
+  background-color: var(--clr-success-state) !important;
   transition: background-color 0.25s;
 }
 
 .cartTotal button:hover {
-  background-color: #9effa8 !important;
+  background-color: var(--clr-success-state-hover) !important;
 }
 
 .cartItemInfo button {
   font-size: 1rem !important;
-  background-color: #c78888 !important;
+  background-color: var(--clr-error-state) !important;
   transition: background-color 0.25s;
 }
 
 .cartItemInfo button:hover {
-  background-color: #ff9e9e !important;
+  background-color: var(--clr-error-state-hover) !important;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: white;
+  }
+  a:hover {
+    color: #000000;
+  }
 }
