@@ -1,6 +1,6 @@
 # Shopping Cart
 
-This project is a mock shopping cart application built using React. It demonstrates various concepts such as component structure, routing, state management, and interaction with APIs. The project includes a home page, a shop page with a shopping cart, and individual product cards with interactive features.
+This project is a mock shopping cart application built using React. It demonstrates various concepts such as component structure, routing, state management, and interaction with APIs. The project demo includes a home page, a shop page with a shopping cart, and individual product cards with interactive features and is hosted with Netlify.
 
 ## Table of Contents
 - [Demo](#demo)
