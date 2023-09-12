@@ -8,7 +8,7 @@ This project is a mock shopping cart application built using React. It demonstra
 - [Technologies Used](#technologies-used)
 
 ## Demo
-[Shopping Cart Project](https://denversiu-shopping-cart.netlify.app/)
+[Shopping Cart Project](https://denver-siu-shopping-cart.netlify.app/)
 
 ## Features
 - Three pages: Home, Shop, and Checkout page.
