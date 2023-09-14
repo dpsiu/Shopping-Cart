@@ -4,11 +4,15 @@ This project is a mock shopping cart application built using React. It demonstra
 
 ## Table of Contents
 - [Demo](#demo)
+- [Why I built the project this way](#why-i-built-the-project-this-way)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 
 ## Demo
 [Shopping Cart Project](https://denver-siu-shopping-cart.netlify.app/)
+
+## Why I built the project this way
+- The project design comes bare bones with a minimalistic design. The idea was to deliver a project that adheres to certain modern design principles without going overboard where not needed. This allows more focus on the application logic and utilization of React's core concepts such as state management, interaction with APIs, routing, and React's hooks.
 
 ## Features
 - Three pages: Home, Shop, and Checkout page.
@@ -26,6 +30,7 @@ This project is a mock shopping cart application built using React. It demonstra
 - State Management
 - Component Structure
 
-## ToDo
-- Create mobile UX
-- Cross-reference WCAG
+## With more time, I would...
+- Create a curated mobile UX
+- Create a light/Dark mode
+- Implement a Filter feature to search by categories such as "tops, bottoms, accessories" etc.
