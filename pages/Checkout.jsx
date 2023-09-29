@@ -18,7 +18,6 @@ export default function Checkout() {
   }, 0);
 
   function checkoutComplete() {
-    console.log(cartItems.length);
     const demoMessage =
       cartItems.length > 0
         ? "Thanks for viewing! Project demo completed."
@@ -36,6 +35,7 @@ export default function Checkout() {
   //   console.log(itemCount);
   //   return itemCount;
   // }
+
   function uniqueItems(items) {
     const itemCount = {};
     items.forEach((item) => {
@@ -53,30 +53,15 @@ export default function Checkout() {
         currencyCode: item.node.variants.edges[0].node.price.currencyCode,
       });
     });
-    console.log(itemCount);
     return itemCount;
   }
-
-  // Render cart items as array or object turned into array?
-  // uniqueItems(cartItems) returns the name for each item and its quantity
-  // But missing the original obj properties?
-  // How might I maintain the itemCount + original object properties?
-  // Should I have itemName contain the itemName, itemCount, and
-  // another obj within with all properties? {}
-  // Or set each item.node.property to itemURL, itemPrice, etc.
-
-  // Assume I want to render unqiueItems array of objects.
-  // OK. I want to store itemCount as object where each key is another
-  // obj key pairing with multiple properties.
-  // Ie, itemCount has 2 keys, shirt and pants, both with title
-  // price and id properties.
 
   const uniqueItemCount = uniqueItems(cartItems);
 
   return (
     <>
       <div className="checkout">
-        <h2>Shopping Cart: </h2>
+        <h3>Shopping Cart: </h3>
         <div className="checkoutContent">
           <div className="itemsInCart">
             {Object.entries(uniqueItemCount).map(
@@ -91,7 +76,7 @@ export default function Checkout() {
                     />
                   </Link>
                   <div className="cartItemInfo">
-                    <h2>{itemProperties[0].title} ({itemProperties.length})</h2>
+                    <h3>{itemProperties[0].title} ({itemProperties.length})</h3>
                     <p>
                       Price: ${itemProperties[0].price * itemProperties.length}{" "}
                       {itemProperties[0].currencyCode} 
