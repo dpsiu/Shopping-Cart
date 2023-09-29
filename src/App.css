@@ -38,9 +38,12 @@ html {
 .navBar {
   padding: .5rem;
   margin: .5rem;
-  list-style: none;
   display: flex;
   justify-content: left;
+}
+
+li {
+  list-style: none;
 }
 
 .homeBody {
@@ -80,25 +83,33 @@ img {
   flex: 1;
 }
 
-/* 
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
+.productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  gap: 1rem;
 }
 
+.productList,
+.productPage,
+.checkout {
+  padding: 1rem;
+}
 
+h3 {
+  margin-left: 2rem;
+}
 
-*/
+.productItem{
+  max-width: fit-content;
+  margin: 1rem;
+  text-align: left;
+}
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
+  height: max-content;
   background-color: #f9f9f9;
   width: 100%;
   margin-top: auto;

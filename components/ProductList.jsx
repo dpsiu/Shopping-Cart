@@ -36,13 +36,12 @@ export default function ProductList() {
 
   return (
     <>
+     <h3>Products</h3>
       <div className="productList">
-        <h3>Products</h3>
-        <ul>
           {products &&
             products.map((product) => (
               <div className="productItem" key={product.node.id}>
-                <li>
+                <div>
                   <h4>{product.node.title}</h4>
                   <Link
                     to={`/ProductPage/${extractValidId(product.node.id)}`}
@@ -68,10 +67,9 @@ export default function ProductList() {
                     {product.node.variants.edges[0].node.price.amount * 5}{" "}
                     {product.node.variants.edges[0].node.price.currencyCode}
                   </p>
-                </li>
+                </div>
               </div>
             ))}
-        </ul>
       </div>
     </>
   );
