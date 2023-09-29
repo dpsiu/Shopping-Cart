@@ -76,7 +76,7 @@ p{
 }
 
 img {
-  max-width: 10rem;
+  max-width: 100%;
 } 
 
 .content {
@@ -103,6 +103,34 @@ h3 {
   max-width: fit-content;
   margin: 1rem;
   text-align: left;
+}
+
+.productPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.productPage img {
+  align-self: center;
+  max-width: 80%;
+}
+
+.productInfo {
+  padding: 2rem;
+}
+
+.addtocartbtn {
+  margin-top: 2rem;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.counter button {
+  height: 30%;
 }
 
 .footer {
