@@ -12,8 +12,10 @@ import NavBar from "../components/NavBar";
 
 const Layout = ({ children }) => (
   <>
-    <NavBar />
-    <div className="content">{children}</div>
+    <div className="application">
+      <NavBar />
+      <div className="content">{children}</div>
+    </div>
     <div className="footer">
       <p>2023</p>
       <a href="https://www.linkedin.com/in/denver-siu/">
@@ -43,7 +45,7 @@ const App = () => {
         return [...cartItems, product];
       });
     }
-    setQuantity(1)
+    setQuantity(1);
   };
 
   const removeFromCart = (product) => {
@@ -57,28 +59,6 @@ const App = () => {
   const decrementQuantity = (itemQuantity) => {
     setQuantity(quantity - 1);
   };
-
-
-  // const decrementQuantity = (productId) => {
-  //   const updatedCartItems = [...cartItems];
-  //   const productIndex = updatedCartItems.findIndex(
-  //     (item) => item.id === productId
-  //   );
-  
-  //   if (productIndex !== -1) {
-  //     if (updatedCartItems[productIndex].quantity > 1) {
-  //       updatedCartItems[productIndex].quantity -= 1;
-  //     } else {
-  //       updatedCartItems.splice(productIndex, 1);
-  //     }
-  //   }
-  // };
-  
-
-// I'm successfully removing from shirts array. However, checkout page
-// doesn't rerender. React rerenders upon state change. So state not changing.
-// BC checkout page reads cartItems array. I am changing shirts array.
-// So need to remove one instance of specified item from cartItems array.
 
   return (
     <ShopContext.Provider
