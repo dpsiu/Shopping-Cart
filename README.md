@@ -39,3 +39,6 @@ This project is a mock shopping cart application built using React. It demonstra
 - Create a curated mobile UX
 - Create a light/Dark mode
 - Implement a Filter feature to search by categories such as "tops, bottoms, accessories" etc.
+
+## Work In Progress
+- Now that the purpose of implementing and practicing React fundamentals has been explored with base styling, implement more complex styling that meets WCAG guidelines.
