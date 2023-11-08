@@ -8,9 +8,6 @@
   --clr-main: #0097A7;
   --clr-main-light: #66C1CA;
   --clr-main-dark: #006A75;
-  --clr-main-transparent: rgba(255, 255, 255, 0.8);
-  --clr-border: #bebebe;
-  --clr-accent: #3f8654;
   --clr-white: white;
   --clr-black: rgb(45, 45, 45);
   --clr-success-state: #9bc596;
@@ -32,6 +29,52 @@ html {
   padding: 0;
 }
 
+/* NavBar */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar,
+li {
+  list-style-type: none;
+  
+}
+
+.alert {
+  color: var(--clr-white);
+  background-color: var(--clr-main-dark);
+  padding: .8rem 0rem;
+  margin: 0;
+  text-align: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  padding: .4rem 1.2rem;
+  border-bottom: var(--clr-black);
+}
+
+.lebalein-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* This won't work bc PNG, not SVG. Alter w/ diff icons
+.nav-icon {
+  width: 2rem;
+  height: 2rem;
+} */
+
+.logo-container {
+  margin-right: auto;
+}
 
 
 /* Footer */
