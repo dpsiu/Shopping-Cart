@@ -1,22 +1,6 @@
 import { Link, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-
-// function showSlides() {
-//   let slides = document.getElementsByClassName("slide");
-//   for (let i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-
-//   slideIndex++;
-//   if (slideIndex > slides.length) {
-//     slideIndex = 1;
-//   }
-
-//   slides[slideIndex - 1].style.display = "block";
-//   setTimeout(showSlides, 5000);
-// }
-
-// showSlides();
+import { SustainableInit } from "../components/SustainableInit";
 
 function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -61,6 +45,7 @@ function Home() {
             <Link to="/store">Shop Now</Link>
           </button>
         </div>
+        <SustainableInit />
       </div>
     </>
   );
