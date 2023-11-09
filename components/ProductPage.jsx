@@ -17,13 +17,13 @@ export default function ProductPage() {
   return (
     <>
       <div className="productPage">
-        <img src={product.node.featuredImage.url} alt={product.node.title} />
-        <div className="productInfo">
+        <div className="product-title">
           <h4>{product.node.title}</h4>
-          <p>{product.node.description}</p>
-          <p>
-            Price: $
-            {product.node.variants.edges[0].node.price.amount * 5 * quantity}{" "}
+          <img src={product.node.featuredImage.url} alt={product.node.title} />
+        </div>
+        <div className="productInfo">
+          <p className="product-page-price">
+            $ {product.node.variants.edges[0].node.price.amount * quantity}{" "}
             {product.node.variants.edges[0].node.price.currencyCode}
           </p>
           <div className="counter">
@@ -33,7 +33,7 @@ export default function ProductPage() {
             >
               -
             </button>
-            <p>{quantity}</p>
+            <p className="product-quantity">{quantity}</p>
             <button
               onClick={() => incrementQuantity()}
               disabled={quantity === 10}
@@ -41,9 +41,14 @@ export default function ProductPage() {
               +
             </button>
           </div>
-          <button className="addtocartbtn" onClick={() => addToCart(product, quantity)}>
-            Add to Cart
+          <button
+            className="addtocartbtn"
+            onClick={() => addToCart(product, quantity)}
+          >
+            ADD TO CART
           </button>
+          <p>Description </p>
+          <p>{product.node.description}</p>
         </div>
       </div>
     </>
