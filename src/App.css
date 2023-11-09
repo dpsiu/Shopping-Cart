@@ -9,6 +9,7 @@
   --clr-main-light: #66c1ca;
   --clr-main-dark: #006a75;
   --clr-white: white;
+  --clr-grey: rgb(203, 203, 203);
   --clr-black: rgb(45, 45, 45);
   --clr-success-state: #9bc596;
   --clr-success-state-hover: #6abf5e;
@@ -29,7 +30,7 @@ a {
   text-decoration: inherit;
 }
 
-/* NavBar */
+/* NavBar ----------------*/
 .navbar {
   display: flex;
   flex-direction: column;
@@ -57,7 +58,7 @@ li {
   gap: 1rem;
   margin: 0;
   padding: 0.4rem 1.2rem;
-  border-bottom: var(--clr-black);
+  border-bottom: var(--clr-grey) 1px solid;
 }
 
 .lebalein-icon {
@@ -75,7 +76,7 @@ li {
   margin-right: auto;
 }
 
-/* Homepage */
+/* Homepage ----------------*/
 .slideshow-container {
   position: relative;
   overflow: hidden;
@@ -149,8 +150,56 @@ img {
   background-color: var(--clr-main-dark);
 }
 
+/* Product List ----------------*/
+.free-shipping {
+  text-align: center;
+  font-size: .9rem;
+  color: var(--clr-white);
+  background-color: var(--clr-black);
+  padding: .6rem 0rem;
+  margin: 0;
+}
 
-/* Footer */
+.products {
+  font-size: 1.4rem;  
+}
+
+.products-quantity, 
+.products {
+  margin-left: 1.6rem;
+
+}
+
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productItem {
+ max-width: 50%;
+ outline: var(--clr-grey) 1px solid;
+}
+
+.productItem p {
+  margin-left: 1rem ;
+}
+
+.product-container {
+  padding-bottom: 1rem;
+}
+
+.product-title {
+  font-weight: 400;
+}
+
+.product-price {
+  font-weight: 700;
+}
+
+
+
+
+/* Footer ----------------*/
 .footer {
   display: flex;
   flex-direction: column;

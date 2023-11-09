@@ -36,40 +36,41 @@ export default function ProductList() {
 
   return (
     <>
-     <h3>Products</h3>
+    <p className="free-shipping">Your $99+ order or in-store pick up SHIPS FREE</p>
+      <h3 className="products">Products</h3>
+      <p className="products-quantity">Results: {products.length} items</p>
       <div className="productList">
-          {products &&
-            products.map((product) => (
-              <div className="productItem" key={product.node.id}>
-                <div>
-                  <h4>{product.node.title}</h4>
-                  <Link
-                    to={`/ProductPage/${extractValidId(product.node.id)}`}
-                    state={{ selectedProduct: selectedProduct }}
-                  >
-                    <img
-                      src={product.node.featuredImage.url}
-                      alt={product.node.title}
-                      onClick={() =>
-                        handleProductClick(
-                          product.node.id,
-                          product.node.title,
-                          product.node.description,
-                          product.node.featuredImage,
-                          product.node.variants.edges[0].node.price.amount * 5,
-                          product.node.quantity
-                        )
-                      }
-                    />
-                  </Link>
-                  <p>
-                    Price: $
-                    {product.node.variants.edges[0].node.price.amount * 5}{" "}
-                    {product.node.variants.edges[0].node.price.currencyCode}
-                  </p>
-                </div>
+        {products &&
+          products.map((product) => (
+            <div className="productItem" key={product.node.id}>
+              <div className="product-container">
+                <Link
+                  to={`/ProductPage/${extractValidId(product.node.id)}`}
+                  state={{ selectedProduct: selectedProduct }}
+                >
+                  <img
+                    src={product.node.featuredImage.url}
+                    alt={product.node.title}
+                    onClick={() =>
+                      handleProductClick(
+                        product.node.id,
+                        product.node.title,
+                        product.node.description,
+                        product.node.featuredImage,
+                        product.node.variants.edges[0].node.price.amount * 5,
+                        product.node.quantity
+                      )
+                    }
+                  />
+                  <p className="product-title">{product.node.title}</p>
+                </Link>
+                <p className="product-price">
+                  ${product.node.variants.edges[0].node.price.amount}{" "}
+                  {product.node.variants.edges[0].node.price.currencyCode}
+                </p>
               </div>
-            ))}
+            </div>
+          ))}
       </div>
     </>
   );
