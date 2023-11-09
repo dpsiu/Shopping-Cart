@@ -21,20 +21,9 @@ export default function Checkout() {
     const demoMessage =
       cartItems.length > 0
         ? "Thanks for viewing! Project demo completed."
-        : "You haven't selected any items!";
+        : "Your cart is empty!";
     alert(demoMessage);
   }
-
-  // function uniqueItems(items) {
-  //   const itemCount = [];
-  //   items.forEach((item) => {
-  //     const itemName = item.node.title;
-  //     const itemId = item.node.id
-  //     itemCount[itemName] = (itemCount[itemName] || 0) + 1;
-  //   });
-  //   console.log(itemCount);
-  //   return itemCount;
-  // }
 
   function uniqueItems(items) {
     const itemCount = {};
@@ -61,7 +50,7 @@ export default function Checkout() {
   return (
     <>
       <div className="checkout">
-        <h3>Shopping Cart: </h3>
+        <h3 className="shopping-cart">Shopping Cart: </h3>
         <div className="checkoutContent">
           <div className="itemsInCart">
             {Object.entries(uniqueItemCount).map(
@@ -76,10 +65,12 @@ export default function Checkout() {
                     />
                   </Link>
                   <div className="cartItemInfo">
-                    <h3>{itemProperties[0].title} ({itemProperties.length})</h3>
-                    <p>
-                      Price: ${itemProperties[0].price * itemProperties.length}{" "}
-                      {itemProperties[0].currencyCode} 
+                    <h3 className="product-title">
+                      {itemProperties[0].title} ({itemProperties.length})
+                    </h3>
+                    <p className="product-price">
+                      ${itemProperties[0].price * itemProperties.length}{" "}
+                      {itemProperties[0].currencyCode}
                     </p>
                     {/* <div className="counter">
                       <button
@@ -106,8 +97,11 @@ export default function Checkout() {
             )}
           </div>
           <div className="cartTotal">
-            <h3>Subtotal: ${subTotal}</h3>
-            <button onClick={() => checkoutComplete()}>
+            <h3>Order Total: {cartItems.length} Item(s)</h3>
+            <h3>Estimated Tax: TBD</h3>
+            <h3>Shipping: TBD</h3>
+            <h2 className="order-total">Subtotal: ${subTotal}</h2>
+            <button className="checkout-btn" onClick={() => checkoutComplete()}>
               Proceed to Checkout
             </button>
           </div>
