@@ -16,18 +16,19 @@
   --clr-error-state-hover: #be6767;
 }
 
+body,
+html {
+  padding: 0;
+  margin: 0;
+
+}
+
 a {
   font-weight: 500;
   color: #000000;
   text-decoration: inherit;
 }
 
-body,
-html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 
 /* NavBar */
 .navbar {
@@ -77,6 +78,67 @@ li {
 }
 
 
+/* Homepage */
+.slideshow-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.homeShopBtn {
+  font-size: medium;
+  border: none;
+  border-radius: 3rem;
+  padding: .8rem 1.5rem;
+}
+
+.slide {
+  display: none;
+}
+
+.homeBody,
+img {
+  width: 100%;
+  height: auto;
+}
+
+.home-text h1,
+.home-text h4,
+.home-text button {
+  position: relative;
+  bottom: 45vh;
+  left: 10vw;
+  color: var(--clr-white);
+  max-width: 80vw;
+  margin: .5rem 0rem;
+}
+
+.visible {
+  display: block;
+  opacity: 1;
+  scale: 2;
+  height: 80vh;
+  transform: translateY(25%);
+  /* transition: opacity .5s ease-in-out; */
+}
+
+/* .fade {
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  position: relative;
+} */
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* Footer */
 
 .footer {
@@ -91,7 +153,6 @@ li {
 
   position: absolute;
   bottom: 0;
-  padding: .5rem;
 }
 
 .footer-links {
