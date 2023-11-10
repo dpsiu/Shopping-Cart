@@ -4,7 +4,7 @@ export function SustainableInit() {
   return (
     <>
       <div className="sustainable-init">
-        <img src="https://denver-siu-shopping-cart.netlify.app/images/SustainabilityPledge.png" alt="" />
+        <img src="src/assets/SustainabilityPledge.png" alt="" />
         <button className="sustainability-letter">
           <Link to="/sustainability-pledge" className="sustainability-letter">
             Read Letter

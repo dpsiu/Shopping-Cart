@@ -16,7 +16,7 @@ export default function NavBar() {
             {/* <p className="LeBalein">LeBalein</p> */}
             <img
               className="lebalein-icon"
-              src="https://denver-siu-shopping-cart.netlify.app/Icons/BlueWhaleIcon.png"
+              src="src/assets/BlueWhaleIcon.png"
               alt="Blue Whale Site Icon"
             />
           </Link>

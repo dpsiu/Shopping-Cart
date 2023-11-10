@@ -20,9 +20,9 @@ function Home() {
   }, []);
 
   const slides = [
-    "https://denver-siu-shopping-cart.netlify.app/images/home-group-cottonbro-studio.jpg",
-    "https://denver-siu-shopping-cart.netlify.app/images/home-solo-godisable-jacob.jpg",
-    "https://denver-siu-shopping-cart.netlify.app/images/home-solo-2-cottonbro-studio.jpg",
+    "src/assets/home-group-cottonbro-studio.jpg",
+    "src/assets/home-solo-godisable-jacob.jpg",
+    "src/assets/home-solo-2-cottonbro-studio.jpg",
   ];
 
   return (
