@@ -16,7 +16,7 @@ export default function NavBar() {
             {/* <p className="LeBalein">LeBalein</p> */}
             <img
               className="lebalein-icon"
-              src="Icons/BlueWhaleIcon.png"
+              src="/Icons/BlueWhaleIcon.png"
               alt="Blue Whale Site Icon"
             />
           </Link>
