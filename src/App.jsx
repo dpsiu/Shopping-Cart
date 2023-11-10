@@ -5,6 +5,7 @@ import { Link, Routes, Route, Outlet } from "react-router-dom";
 import MyComponent from "./MyComponent";
 import Store from "../pages/Store";
 import Checkout from "../pages/Checkout";
+import { Sustainability } from "../pages/Sustainability";
 import Home from "../pages/Home";
 import ProductList from "../components/ProductList";
 import ProductPage from "../components/ProductPage";
@@ -93,6 +94,14 @@ const App = () => {
           element={
             <Layout>
               <Checkout />
+            </Layout>
+          }
+        />
+        <Route
+          path="/sustainability-pledge"
+          element={
+            <Layout>
+              <Sustainability />
             </Layout>
           }
         />

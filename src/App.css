@@ -327,6 +327,81 @@ img {
   display: flex;
   flex-direction: column;
 }
+
+/* Sustainability Pledge ----------------*/
+.dark-overlay{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* object-fit: cover;
+  overflow: hidden; */
+}
+
+.dark-overlay img{
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.dark-overlay::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.pledge-text {
+  position: absolute;
+  z-index: 1;
+  color: var(--clr-white);
+  width: 90%;
+  text-align: center;
+}
+
+.pledge-lebalein,
+.pledge-title{
+  margin: .2rem;
+}
+
+.pledge-lebalein{
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+.pledge-letter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.pledge-letter h2{
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 4rem;
+}
+
+.sustainability-pledge img{
+  width: 100%;
+  height: auto;
+}
+
+.pledge-whale{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pledge-whale img{
+  max-height: 500px;
+  object-fit: cover;
+}
+
 /* Footer ----------------*/
 .footer {
   display: flex;
@@ -337,7 +412,6 @@ img {
   position: relative;
   bottom: 0;
   background-color: var(--clr-black);
-  margin-top: 4rem;
 }
 
 .footer-links {
@@ -494,6 +568,14 @@ img {
     height: fit-content;
     width: 30vw;
   }
+
+  .pledge-paragraph{
+    max-width: 30%;
+  }
+
+  .pledge-letter{
+    gap: 3rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -571,5 +653,10 @@ img {
   .checkout {
     margin: 0 auto;
     max-width: 70vw;
+  }
+
+  .pledge-letter{
+    gap: 5rem;
+    margin: 4rem auto;
   }
 }
