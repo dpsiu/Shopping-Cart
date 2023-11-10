@@ -5,7 +5,7 @@ export function Sustainability() {
         <div>
           <div className="dark-overlay">
             <img
-              src="/images/sustainability-banner-marcelo-chagas.jpg"
+              src="https://denver-siu-shopping-cart.netlify.app/images/sustainability-banner-marcelo-chagas.jpg"
               alt="Picture of model by Marcelo Chagas"
             />
             <div className="pledge-text">
@@ -56,7 +56,7 @@ export function Sustainability() {
         </div>
         <div className="pledge-whale">
           <img
-            src="/images/sustainability-daniel-ross.jpg"
+            src="https://denver-siu-shopping-cart.netlify.app/images/sustainability-daniel-ross.jpg"
             alt="Picture of whale breaching by Daniel Ross"
           />
         </div>
