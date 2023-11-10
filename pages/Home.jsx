@@ -20,9 +20,9 @@ function Home() {
   }, []);
 
   const slides = [
-    "images/Homebanner Group cottonbro-studio.jpg",
-    "images/Homebanner Solo - godisable-jacob.jpg",
-    "images/Homebanner solo 2 cottonbro-studio.jpg",
+    "/images/home-group-cottonbro-studio.jpg",
+    "/images/home-solo-godisable-jacob.jpg",
+    "/images/home-solo-2-cottonbro-studio.jpg",
   ];
 
   return (
