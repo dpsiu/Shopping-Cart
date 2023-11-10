@@ -20,9 +20,9 @@ function Home() {
   }, []);
 
   const slides = [
-    "src/assets/home-group-cottonbro-studio.jpg",
-    "src/assets/home-solo-godisable-jacob.jpg",
-    "src/assets/home-solo-2-cottonbro-studio.jpg",
+    "/home-group-cottonbro-studio.jpg",
+    "/home-solo-godisable-jacob.jpg",
+    "/home-solo-2-cottonbro-studio.jpg",
   ];
 
   return (

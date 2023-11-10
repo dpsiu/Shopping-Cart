@@ -5,7 +5,7 @@ export function Sustainability() {
         <div>
           <div className="dark-overlay">
             <img
-              src="src/assets/sustainability-banner-marcelo-chagas.jpg"
+              src="/sustainability-banner-marcelo-chagas.jpg"
               alt="Picture of model by Marcelo Chagas"
             />
             <div className="pledge-text">
@@ -56,7 +56,7 @@ export function Sustainability() {
         </div>
         <div className="pledge-whale">
           <img
-            src="src/assets/sustainability-daniel-ross.jpg"
+            src="/sustainability-daniel-ross.jpg"
             alt="Picture of whale breaching by Daniel Ross"
           />
         </div>
