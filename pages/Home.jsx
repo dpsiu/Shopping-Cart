@@ -1,6 +1,5 @@
 import { Link, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { SustainableInit } from "../components/SustainableInit";
 
 function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -45,7 +44,14 @@ function Home() {
             <Link to="/store">Shop Now</Link>
           </button>
         </div>
-        <SustainableInit />
+        <div className="sustainable-init">
+          <img src="/sustainability-pledge.png" alt="" />
+          <button className="sustainability-letter">
+            <Link to="/sustainability-pledge" className="sustainability-letter">
+              Read Letter
+            </Link>
+          </button>
+        </div>
       </div>
     </>
   );
