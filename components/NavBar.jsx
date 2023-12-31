@@ -13,7 +13,6 @@ export default function NavBar() {
         <p className="alert">Flash Sale | Extra 25% Off Select Products</p>
         <ul className="navigation">
           <Link to="/" className="logo-container">
-            {/* <p className="LeBalein">LeBalein</p> */}
             <img
               className="lebalein-icon"
               src="/lebaleinicon.png"
@@ -22,19 +21,9 @@ export default function NavBar() {
           </Link>
           <Link to="/store">
             <li>Store</li>
-            {/* <img
-              className="nav-icon"
-              src="Icons/Header search icon.png"
-              alt="Search Icon"
-            /> */}
           </Link>
           <Link to="/checkout" className="lastLink">
             <li>Checkout {cartItemsNum}</li>
-            {/* <img
-              className="nav-icon"
-              src="Icons/Header bag icon.png"
-              alt="Bag / Checkout Icon"
-            /> */}
           </Link>
         </ul>
       </nav>
