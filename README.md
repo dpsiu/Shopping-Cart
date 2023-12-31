@@ -1,6 +1,8 @@
-# Shopping Cart
+# Shopping Cart (UPDATED 11/23)
 
 This project is a mock shopping cart application built using React. It demonstrates various concepts such as component structure, routing, state management, and interaction with APIs. The project demo includes a home page, a shop page with a shopping cart, and individual product cards with interactive features and is hosted with Netlify.
+
+## UPDATE: A redone UI has been added to the Shopping Cart Application in the form of LeBalein, a mock ethical fashion brand
 
 ## Table of Contents
 - [Demo](#demo)
@@ -11,7 +13,13 @@ This project is a mock shopping cart application built using React. It demonstra
 ## Demo
 [Shopping Cart Project](https://denver-siu-shopping-cart.netlify.app/)
 
-## Application Screenshots
+## Application Screenshots (NEW)
+![LeBalein Product Homepage](github-imgs/lebalein-homepage.png)
+![LeBalein Mobile Sustainability Pledge](github-imgs/lebalein-pledge-mobile.png)
+![LeBalein Products Page](github-imgs/lebalein-products.png)
+![LeBalein Checkout](github-imgs/lebalein-checkout.png)
+
+## Application Screenshots (OLD)
 ![Product list page of shopping cart application](https://github.com/dpsiu/Shopping-Cart/blob/main/Shopping%20Cart%20Front%20Page.jpg)
 ![Product page screenshot](https://github.com/dpsiu/Shopping-Cart/blob/main/Shop.Cart%20Prod.%20Page.jpg)
 ![Checkout page screenshot](https://github.com/dpsiu/Shopping-Cart/blob/main/Shop.%20Cart%20Checkout%20Page.jpg)
@@ -36,9 +44,9 @@ This project is a mock shopping cart application built using React. It demonstra
 - Component Structure
 
 ## With more time, I would...
-- Create a curated mobile UX
+- (Completed 11/23) Create a curated mobile UX
 - Create a light/Dark mode
 - Implement a Filter feature to search by categories such as "tops, bottoms, accessories" etc.
 
 ## Work In Progress
-- Now that the purpose of implementing and practicing React fundamentals has been explored with base styling, implement more complex styling that meets WCAG guidelines.
+- (Completed 11/23) Now that the purpose of implementing and practicing React fundamentals has been explored with base styling, implement more complex styling that meets WCAG guidelines.
