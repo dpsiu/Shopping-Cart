@@ -37,7 +37,7 @@ export default function Checkout() {
       itemCount[itemName].push({
         title: item.node.title,
         id: item.node.id,
-        price: item.node.variants.edges[0].node.price.amount * 5,
+        price: item.node.variants.edges[0].node.price.amount,
         image: item.node.featuredImage.url,
         currencyCode: item.node.variants.edges[0].node.price.currencyCode,
       });

@@ -59,7 +59,7 @@ export default function ProductList() {
                           product.node.title,
                           product.node.description,
                           product.node.featuredImage,
-                          product.node.variants.edges[0].node.price.amount * 5,
+                          product.node.variants.edges[0].node.price.amount,
                           product.node.quantity
                         )
                       }

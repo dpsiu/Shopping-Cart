@@ -2,7 +2,6 @@ import { useState, createContext, useEffect } from "react";
 import "./App.css";
 import { Link, Routes, Route, Outlet } from "react-router-dom";
 
-import MyComponent from "./MyComponent";
 import Store from "../pages/Store";
 import Checkout from "../pages/Checkout";
 import { Sustainability } from "../pages/Sustainability";
