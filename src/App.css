@@ -131,7 +131,7 @@ img {
   display: block;
   opacity: 1;
   scale: 2;
-  /* height: 60vh; */
+  height: 60vh;
   transform: translateY(25%);
   /* transition: opacity .5s ease-in-out; */
 }
@@ -447,7 +447,7 @@ img {
 }
 
 .footer .social-icon {
-  font-size: 2rem;
+  font-size: 1.2rem;
   color: var(--clr-white);
   transition: color 0.15s;
 }
