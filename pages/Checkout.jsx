@@ -72,19 +72,6 @@ export default function Checkout() {
                       ${itemProperties[0].price * itemProperties.length}{" "}
                       {itemProperties[0].currencyCode}
                     </p>
-                    {/* <div className="counter">
-                      <button
-                        onClick={() => decrementQuantity(itemProperties[0].id)}
-                      >
-                        -
-                      </button>
-                      <p>{itemProperties.length}</p>
-                      <button
-                        onClick={() => addToCart(itemProperties[0], 1)}
-                      >
-                        +
-                      </button>
-                    </div> */}
                     <button
                       className="removeProduct"
                       onClick={() => removeFromCart(itemName)}

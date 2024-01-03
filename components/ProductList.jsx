@@ -49,7 +49,6 @@ export default function ProductList() {
                 <div className="product-container">
                   <Link
                     to={`/ProductPage/${extractValidId(product.node.id)}`}
-                    state={{ selectedProduct: selectedProduct }}
                   >
                     <img
                       src={product.node.featuredImage.url}
