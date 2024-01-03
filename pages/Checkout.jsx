@@ -14,7 +14,7 @@ export default function Checkout() {
   } = useContext(ShopContext);
 
   const subTotal = cartItems.reduce((total, item) => {
-    return total + item.node.variants.edges[0].node.price.amount * 5;
+    return total + item.node.variants.edges[0].node.price.amount * 1;
   }, 0);
 
   function checkoutComplete() {

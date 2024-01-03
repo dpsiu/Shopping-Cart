@@ -11,7 +11,7 @@ function Home() {
       );
     };
 
-    const interval = setInterval(showSlides, 70000);
+    const interval = setInterval(showSlides, 7000);
 
     return () => {
       clearInterval(interval);
