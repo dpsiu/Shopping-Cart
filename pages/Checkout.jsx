@@ -28,13 +28,13 @@ export default function Checkout() {
   function uniqueItems(items) {
     const itemCount = {};
     items.forEach((item) => {
-      const itemName = item.node.title;
+      const itemId = item.node.id;
 
-      if (!itemCount[itemName]) {
-        itemCount[itemName] = [];
+      if (!itemCount[itemId]) {
+        itemCount[itemId] = [];
       }
 
-      itemCount[itemName].push({
+      itemCount[itemId].push({
         title: item.node.title,
         id: item.node.id,
         price: item.node.variants.edges[0].node.price.amount,
